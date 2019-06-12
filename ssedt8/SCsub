@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+
+Import('env')
+Import('env_modules')
+
+env_immune = env_modules.Clone()
+env_immune.add_source_files(env.modules_sources, '*.cpp')
+#env_immune.Append(CXXFLAGS=['-O2', '-std=c++11'])
